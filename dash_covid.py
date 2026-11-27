@@ -7,8 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/1f5cDkewOugqweOlVVJgdiLr-7BV1fS1h
 """
 
-!pip install -q streamlit
-
 import pandas as pd
 import plotly.express as px
 import streamlit as st
@@ -19,7 +17,6 @@ st.title("DASHCOVID - dados sobre Covid-2019")
 
 df = pd.read_csv('WHO_time_series.csv')
 
-df.head()
 
 fig1 = px.line(df, x = "Date_reported", y = 'Cumulative_cases',
                color = "Country", title="Casos de Covid-19 no mundo")
